@@ -1,7 +1,9 @@
 <script>
     function bold(){
-        var toReplace = document.getElementById("name").innerText;
-        document.body.innerHTML = document.body.innerHTML.replaceAll(toReplace, `<b>${toReplace}</b>`);
+        var toReplace = "{% for name in info.profile.name %}{{name[1]}} {% endfor %}".trim().split(' ');
+        for(var i in toReplace){
+            document.body.innerHTML = document.body.innerHTML.replaceAll(toReplace[i], `<b>${toReplace[i]}</b>`);
+        }
     }
 
     window.addEventListener("load", bold)

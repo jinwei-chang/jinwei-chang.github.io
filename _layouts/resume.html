@@ -4,13 +4,17 @@ layout: default
 
 {% assign info = site.data.info %}
 {% assign text = site.data.text[page.language] %}
+{% include emphasize.html %}
 
 <h1 id="name">{{ info.profile.name[page.language] }}</h1>
 
 <ul style="list-style-type:none">
-    <li>email: <a href="mailto:{{ info_common.profile.email }}">{{ info.profile.email }}</a></li>
-    {% if page.language == "en" %} <a href="/tw/">中文</a> {% endif %}
-    {% if page.language == "zh-tw" %} <a href="/">English</a> {% endif %}
+    <li>email: <a href="mailto:{{ info.profile.email }}">{{ info.profile.email }}</a></li>
+
+    <li>
+        {% if page.language == "en" %} <a href="/tw/">中文</a> {% endif %}
+        {% if page.language == "zh-tw" %} <a href="/">English</a> {% endif %}
+    </li>
 </ul>
 
 <p> {{ content }} </p>
