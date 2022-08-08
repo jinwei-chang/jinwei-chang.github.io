@@ -1,0 +1,23 @@
+<h2>{{ text.publication }}</h2>
+
+<h3>{{ text.journal_paper }}</h3>
+<ol>
+{% for paper in info.publication.journal %}
+    <li>
+        {{ paper.author }}, "{{ paper.title}}," <i>{{ paper.publication }}</i>. 
+        {% if paper.note %} ({{ paper.note }}) {% endif %}
+        {% if paper.importance %} ({{ paper.importance }}) {% endif %}
+    </li>
+{% endfor %}
+</ol>
+
+<h3>{{ text.conference_paper }}</h3>
+<ol>
+{% for paper in info.publication.conference %}
+    <li>
+        {{ paper.author }}, "{{ paper.title}}," <i>{{ paper.publication }}</i>. 
+        {% if paper.note %} ({{ paper.note }}) {% endif %}
+        {% if paper.importance %} ({{ paper.importance }}) {% endif %}
+    </li>
+{% endfor %}
+</ol>

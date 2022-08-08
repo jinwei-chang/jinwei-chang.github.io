@@ -2,59 +2,39 @@
 layout: default
 ---
 
-{% assign info = site.data.info[page.language] %}
-{% assign info_com = site.data.info["com"] %}
+{% assign info = site.data.info %}
 {% assign text = site.data.text[page.language] %}
 
-<h1>{{ info.name }}</h1>
-{% if page.language == "en" %}
-    <a href="/tw/">中文</a>
-{% endif %}
-{% if page.language == "zh-tw" %}
-    <a href="/">English</a>
-{% endif %}
+<h1 id="name">{{ info.profile.name[page.language] }}</h1>
 
+<ul style="list-style-type:none">
+    <li>email: <a href="mailto:{{ info_common.profile.email }}">{{ info.profile.email }}</a></li>
+    {% if page.language == "en" %} <a href="/tw/">中文</a> {% endif %}
+    {% if page.language == "zh-tw" %} <a href="/">English</a> {% endif %}
+</ul>
 
 <p> {{ content }} </p>
 
 <h2>{{ text.education }}</h2>
 <ol>
-{% for school in info.education %}
+{% for school in info.education[page.language] %}
     <li>
         {{ school.degree }}, {{ school.department }}, {{ school.name }}, {{ school.from }} ~ {{ school.end }}
     </li>
 {% endfor %}
 </ol>
 
-<h2>{{ text.publication }}</h2>
-<h3>{{ text.journal_paper }}</h3>
-<ol>
-{% for paper in info_com.publication.journal %}
-    <li>
-        {{ paper.author }}, "{{ paper.title}}," <i>{{ paper.publication }}</i>. 
-        {% if paper.note != "" %} ({{ paper.note }}) {% endif %}
-        {% if paper.importance != "" %} ({{ paper.importance }}) {% endif %}
-    </li>
-{% endfor %}
-</ol>
-<h3>{{ text.conference_paper }}</h3>
-<ol>
-{% for paper in info_com.publication.conference %}
-    <li>
-        {{ paper.author }}, "{{ paper.title}}," <i>{{ paper.publication }}</i>. 
-        {% if paper.note != "" %} ({{ paper.note }}) {% endif %}
-        {% if paper.importance != "" %} ({{ paper.importance }}) {% endif %}
-    </li>
-{% endfor %}
-</ol>
+{% include publication.html %}
 
+{% if site.resume.award %}
 <h2>{{ text.award }}</h2>
 <ol>
 {% for award in info.award %}
     <li>
         {{ award.title }}. 
-        {% if award.grade != "" %} ({{ award.grade }}) {% endif %}
-        {% if award.award != "" %} ({{ award.award }}) {% endif %}
+        {% if award.grade %} ({{ award.grade }}) {% endif %}
+        {% if award.award %} ({{ award.award }}) {% endif %}
     </li>
 {% endfor %}
 </ol>
+{% endif %}

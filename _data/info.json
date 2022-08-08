@@ -1,29 +1,13 @@
 {
-    "com": {
-        "publication": {
-            "journal": [
-                {
-                    "author": "Jin-Wei Chang and Tseng-Yi Chen",
-                    "title": "When B+-tree Meets Skyrmion Memory: How Skyrmion Memory Affects an Indexing Scheme",
-                    "publication": "accepted and to appear on IEEE Transactions on Computer-Aided Design of Integrated Circuits and Systems (TCAD)",
-                    "note": "Integrated with ACM/IEEE CODES+ISSS 22",
-                    "importance": "" 
-                }
-            ],
-            "conference":[
-                {
-                    "author": "Jin-Wei Chang and Tseng-Yi Chen",
-                    "title": "When B+-tree Meets Skyrmion Memory: How Skyrmion Memory Affects an Indexing Scheme",
-                    "publication": "ACM/IEEE CODES+ISSS 2022",
-                    "note": "Integrated with Computer-Aided Design of Integrated Circuits and Systems (TCAD)",
-                    "importance": "top conference"
-                }
-            ]
+    "profile": {
+        "email": "jinwei.chang1221@gmail.com",
+        "name": {
+            "en": "Jin-Wei Chang",
+            "zh-tw": "張晉瑋"
         }
     },
-    "en": {
-        "name": "Jin-Wei Chang",
-        "education": [
+    "education": {
+        "en": [
             {
                 "degree": "B.S.",
                 "name": "Yuan Ze University",
@@ -39,20 +23,7 @@
                 "end": "now"
             }
         ],
-        "project": [
-
-        ],
-        "award": [
-            {
-                "title": "ICCAD 2021 CAD Contest: Problem F - Verilog Simulation Optimization via Instruction Reduction",
-                "grade": "",
-                "award": "Excellence"
-            }
-        ]
-    },
-    "zh-tw": {
-        "name": "張晉瑋",
-        "education": [
+        "zh-tw": [
             {
                 "degree": "B.S.",
                 "name": "元智大學",
@@ -67,9 +38,34 @@
                 "from": "2022",
                 "end": "now"
             }
-        ],
-        "project": [
-
         ]
-    }
+    },
+    "publication": {
+        "journal": [
+            {
+                "author": "Jin-Wei Chang and Tseng-Yi Chen",
+                "title": "When B+-tree Meets Skyrmion Memory: How Skyrmion Memory Affects an Indexing Scheme",
+                "publication": "accepted and to appear on IEEE Transactions on Computer-Aided Design of Integrated Circuits and Systems (TCAD)",
+                "note": "Integrated with ACM/IEEE CODES+ISSS 22"
+            }
+        ],
+        "conference":[
+            {
+                "author": "Jin-Wei Chang and Tseng-Yi Chen",
+                "title": "When B+-tree Meets Skyrmion Memory: How Skyrmion Memory Affects an Indexing Scheme",
+                "publication": "ACM/IEEE CODES+ISSS 2022",
+                "note": "Integrated with Computer-Aided Design of Integrated Circuits and Systems (TCAD)",
+                "importance": "top conference"
+            }
+        ]
+    },
+    "award": [
+        {
+            "title": "ICCAD 2021 CAD Contest: Problem F - Verilog Simulation Optimization via Instruction Reduction",
+            "award": "Excellence"
+        }
+    ],
+    "project": [
+
+    ]
 }

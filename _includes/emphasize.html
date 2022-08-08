@@ -1,0 +1,8 @@
+<script>
+    function bold(){
+        var toReplace = document.getElementById("name").innerText;
+        document.body.innerHTML = document.body.innerHTML.replaceAll(toReplace, `<b>${toReplace}</b>`);
+    }
+
+    window.addEventListener("load", bold)
+</script>
