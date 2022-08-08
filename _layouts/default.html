@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        {% seo %}
+        <script>
+            function bold(){
+                document.body.innerHTML = document.body.innerHTML.replaceAll("Jin-Wei Chang", "<b>Jin-Wei Chang</b>");
+            }
+        </script>
+    </head>
+    <body onload="bold()">
+        {{ content }}
+    </body>
+</html>

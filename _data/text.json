@@ -1,0 +1,16 @@
+{
+    "en": {
+        "education": "Education",
+        "publication": "Publication",
+        "conference_paper": "Conference Paper",
+        "journal_paper": "Journal Paper",
+        "award": "Award",
+        "project": "Project"
+    },
+    "zh-tw": {
+        "education": "學歷",
+        "publication": "著作",
+        "conference_paper": "會議論文",
+        "journal_paper": "期刊論文"
+    }
+}
