@@ -1,8 +1,11 @@
-<h2>{{ text.publication }}</h2>
+{% assign journal_paper = info.publication.journal | default: default.publication.journal %}
+{% assign conference_paper = info.publication.conference | default: default.publication.conference %}
+
+<h2 id="publication">{{ text.publication }}</h2>
 
 <h3>{{ text.journal_paper }}</h3>
 <ol>
-{% for paper in info.publication.journal %}
+{% for paper in journal_paper %}
     <li>
         {{ paper.author }}, "{{ paper.title}}," <i>{{ paper.publication }}</i>. 
         {% if paper.note %} ({{ paper.note }}) {% endif %}
@@ -13,7 +16,7 @@
 
 <h3>{{ text.conference_paper }}</h3>
 <ol>
-{% for paper in info.publication.conference %}
+{% for paper in conference_paper%}
     <li>
         {{ paper.author }}, "{{ paper.title}}," <i>{{ paper.publication }}</i>. 
         {% if paper.note %} ({{ paper.note }}) {% endif %}

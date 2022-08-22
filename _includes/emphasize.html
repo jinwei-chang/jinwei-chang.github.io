@@ -1,6 +1,6 @@
 <script>
     function bold(){
-        var toReplace = "{% for name in info.profile.name %}{{name[1]}} {% endfor %}".trim().split(' ');
+        var toReplace = "{% for lang in site.data.info %}{{ lang[1].name }} {% endfor %}".trim().split(' ');
         for(var i in toReplace){
             document.body.innerHTML = document.body.innerHTML.replaceAll(toReplace[i], `<b>${toReplace[i]}</b>`);
         }

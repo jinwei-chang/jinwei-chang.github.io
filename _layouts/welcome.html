@@ -1,0 +1,22 @@
+---
+layout: default
+...
+
+{% assign info = site.data.info %}
+{% assign text = site.data.text %}
+
+{% for lang in info %}
+    {% if lang[0] == "default" %} {% continue %} {% endif %}
+    <h1><a href="/{{lang[0]}}">{{ lang[1].name }}</a></h1>
+
+    {% assign la = lang[0] %}
+    <ol>
+    {% for text in text[la] %}
+        <li>
+            <a href="/{{lang[0]}}/#{{text[0]}}">{{ text[1] }}</a>
+        </li>
+    {% endfor %}
+    </ol>
+{% endfor %}
+
+{{ content }}

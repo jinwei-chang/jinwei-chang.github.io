@@ -1,8 +1,14 @@
+{% assign default = site.data.info["default"] %}
+{% assign info = site.data.info[page.language] %}
+{% assign text = site.data.text[page.language] %}
+
 <!DOCTYPE html>
 <html>
     <head>
-        {% seo %}
+        <title>{{ info.profile.name[page.language] | default: site.title }}</title>
+        {% seo title=false %}
         {% include google_analytics.html %}
+        {% if page.layout == "resume" %}{% include emphasize.html %}{% endif %}
     </head>
     <body>
         {{ content }}

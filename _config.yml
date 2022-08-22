@@ -1,10 +1,10 @@
 title: Jin-Wei Chang
-baseurl: ""
 domain: "heymatch.github.io"
 url: "https://heymatch.github.io"
 
 plugins:
     - jekyll-feed
+    - jekyll-sitemap
 
 resume:
     award: true
