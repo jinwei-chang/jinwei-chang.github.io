@@ -6,6 +6,7 @@
 <html>
     <head>
         <title>{{ info.profile.name[page.language] | default: site.title }}</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         {% seo title=false %}
         {% include google_analytics.html %}
         {% if page.layout == "resume" %}{% include emphasize.html %}{% endif %}
