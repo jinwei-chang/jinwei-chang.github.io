@@ -1,6 +1,6 @@
 ---
 layout: resume
 language: en
+resume:
+    award: true
 ---
-
-Jin-Wei Chang

@@ -5,6 +5,3 @@ url: "https://heymatch.github.io"
 plugins:
     - jekyll-feed
     - jekyll-sitemap
-
-resume:
-    award: true

@@ -1,0 +1,11 @@
+{% assign text = site.data.text[page.language] | default: site.data.text["default"] %}
+{% assign education = site.data.info[page.language].education | default: site.data.info["default"].education %}
+
+<h2>{{ text.education }}</h2>
+<ol>
+{% for school in education %}
+    <li>
+        {{ school.degree }}, {{ school.department }}, {{ school.name }}, {{ school.from }} ~ {{ school.end }}
+    </li>
+{% endfor %}
+</ol>

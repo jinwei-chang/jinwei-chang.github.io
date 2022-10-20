@@ -5,6 +5,8 @@ layout: default
 {% assign info = site.data.info %}
 {% assign text = site.data.text %}
 
+{% include head.html %}
+
 {% for lang in info %}
     {% if lang[0] == "default" %} {% continue %} {% endif %}
     <h1><a href="/{{lang[0]}}">{{ lang[1].name }}</a></h1>

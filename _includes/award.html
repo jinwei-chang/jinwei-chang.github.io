@@ -1,0 +1,12 @@
+{% assign awards = info.award | default: default.award %}
+
+<h2>{{ text.award }}</h2>
+<ol>
+{% for award in awards %}
+    <li>
+        {{ award.title }}. 
+        {% if award.grade %} ({{ award.grade }}) {% endif %}
+        {% if award.award %} ({{ award.award }}) {% endif %}
+    </li>
+{% endfor %}
+</ol>
