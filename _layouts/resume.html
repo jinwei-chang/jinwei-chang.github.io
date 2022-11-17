@@ -21,6 +21,8 @@ layout: default
     <li>email: <a href="mailto:{{ info.profile.email }}">{{ info.email | default: default.email }}</a></li>    
 </ul>
 
+{{ page.description }}
+
 {% include education.html %}
 
 {% include publication.html %}
