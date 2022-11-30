@@ -4,7 +4,7 @@
 <ol>
 {% for award in awards %}
     <li>
-        {{ award.title }}
+        {{ award.title }}, {{ award.year }}, {{ award.work }}
         {% if award.grade %} ({{ award.grade }}) {% endif %}
         {% if award.award %} ({{ award.award }}) {% endif %}
     </li>

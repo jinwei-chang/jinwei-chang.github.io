@@ -20,9 +20,11 @@
                 }
             ]
         },
-        
         "project": [
     
+        ],
+        "article": [
+
         ]
     },
     "en": {
@@ -45,10 +47,21 @@
         ],
         "award": [
             {
-                "title": "College Student Research Creativity Award - 於斯格明子賽道記憶體技術上優化B+樹索引架構"
+                "title": "College Student Research Creativity Award",
+                "year": "2022",
+                "work": "於斯格明子賽道記憶體技術上優化B+樹索引架構"
             },
             {
-                "title": "ICCAD 2021 CAD Contest: Problem F - Verilog Simulation Optimization via Instruction Reduction",
+                "title": "AI CUP",
+                "year": "2022",
+                "work": "尋找花中君子-蘭花種類辨識與分類競賽",
+                "award": "Honorable Mention",
+                "rank": "33"
+            },
+            {
+                "title": "ICCAD CAD Contest",
+                "work": "Problem F - Verilog Simulation Optimization via Instruction Reduction",
+                "year": "2021",
                 "award": "Excellence Award"
             }
         ]
@@ -73,10 +86,21 @@
         ],
         "award": [
             {
-                "title": "大專學生研究創作獎 - 於斯格明子賽道記憶體技術上優化B+樹索引架構"
+                "title": "大專學生研究創作獎",
+                "year": "2022",
+                "work": "於斯格明子賽道記憶體技術上優化B+樹索引架構"
             },
             {
-                "title": "ICCAD 2021 CAD Contest: Problem F - Verilog Simulation Optimization via Instruction Reduction",
+                "title": "AI CUP",
+                "year": "2022",
+                "work": "尋找花中君子-蘭花種類辨識與分類競賽",
+                "award": "佳作",
+                "rank": "33"
+            },
+            {
+                "title": "ICCAD CAD Contest",
+                "work": "Problem F - Verilog Simulation Optimization via Instruction Reduction",
+                "year": "2021",
                 "award": "優等"
             }
         ]
