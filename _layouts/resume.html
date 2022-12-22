@@ -18,17 +18,17 @@ layout: default
     {% include nav.html %}
 
 <ul style="list-style-type:none">
-    <li>email: <a href="mailto:{{ info.profile.email }}">{{ info.email | default: default.email }}</a></li>    
+    <li>email: <a href="mailto:{{ info.email | default: default.email }}">{{ info.email | default: default.email }}</a></li>    
 </ul>
 
 {{ page.description }}
 
-{% include education.html %}
+{% include cv/education.html %}
 
-{% include publication.html %}
+{% include cv/publication.html %}
 
 {% if page.resume.award %}
-    {% include award.html %}
+    {% include cv/award.html %}
 {% endif %}
 
 {{ content }}

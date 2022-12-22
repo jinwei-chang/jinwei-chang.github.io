@@ -1,7 +1,7 @@
 {% assign text = site.data.text[page.language] | default: site.data.text["default"] %}
 {% assign education = site.data.info[page.language].education | default: site.data.info["default"].education %}
 
-<h2>{{ text.education }}</h2>
+<h2 id="education">{{ text.education }}</h2>
 <ol>
 {% for school in education %}
     <li>

@@ -1,5 +1,6 @@
 ---
 layout: resume
+title: 張晉瑋
 language: zh-tw
 resume:
     award: true

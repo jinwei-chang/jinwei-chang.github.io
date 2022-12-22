@@ -1,6 +1,6 @@
 {% assign awards = info.award | default: default.award %}
 
-<h2>{{ text.award }}</h2>
+<h2 id="award">{{ text.award }}</h2>
 <ol>
 {% for award in awards %}
     <li>

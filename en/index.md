@@ -1,5 +1,6 @@
 ---
 layout: resume
+title: Jin-Wei Chang
 language: en
 resume:
     award: true

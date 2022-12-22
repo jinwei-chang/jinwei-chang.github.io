@@ -3,7 +3,7 @@
 
 <h2 id="publication">{{ text.publication }}</h2>
 
-<h3>{{ text.journal_paper }}</h3>
+<h3 id="journal_paper">{{ text.journal_paper }}</h3>
 <ol>
 {% for paper in journal_paper %}
     <li>
@@ -14,7 +14,7 @@
 {% endfor %}
 </ol>
 
-<h3>{{ text.conference_paper }}</h3>
+<h3 id="conference_paper">{{ text.conference_paper }}</h3>
 <ol>
 {% for paper in conference_paper%}
     <li>
