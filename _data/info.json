@@ -47,6 +47,14 @@
         ],
         "award": [
             {
+                "title": "Kaggle Competition",
+                "year": "2022",
+                "work": "JPX Tokyo Stock Exchange Prediction",
+                "award": "Silver Medal",
+                "rank": "27",
+                "total": "2033"
+            },
+            {
                 "title": "College Student Research Creativity Award",
                 "year": "2022",
                 "work": "於斯格明子賽道記憶體技術上優化B+樹索引架構"
@@ -85,6 +93,14 @@
             }
         ],
         "award": [
+            {
+                "title": "Kaggle Competition",
+                "year": "2022",
+                "work": "JPX Tokyo Stock Exchange Prediction",
+                "award": "銀獎",
+                "rank": "27",
+                "total": "2033"
+            },
             {
                 "title": "大專學生研究創作獎",
                 "year": "2022",
