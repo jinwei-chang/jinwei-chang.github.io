@@ -1,12 +1,21 @@
-{% assign awards = info.award | default: default.award %}
+{% assign award_list = info.award %}
 
-<h2 id="award">{{ text.award }}</h2>
+<h2 id="award">{{ text_section.award }}</h2>
 <ol>
-{% for award in awards %}
+{% for award_item in award_list %}
+    {% assign title = award_item.title[page.language] | default: award_item.title["default"] %}
+    {% assign year = award_item.year[page.language] | default: award_item.year["default"] %}
+    {% assign work = award_item.work[page.language] | default: award_item.work["default"] %}
+    {% assign grade = award_item.grade[page.language] | default: award_item.grade["default"] %}
+    {% assign award = award_item.award[page.language] | default: award_item.award["default"] %}
+    {% assign certificate = award_item.certificate[page.language] | default: award_item.certificate["default"] %}
+    {% assign link = award_item.link[page.language] | default: award_item.link["default"] %}
     <li>
-        {{ award.title }}, {{ award.year }}, {{ award.work }}
-        {% if award.grade %} ({{ award.grade }}) {% endif %}
-        {% if award.award %} ({{ award.award }}) {% endif %}
+        {{ title }}, {{ year }}, {{ work }}
+        {% if grade %} ({{ grade }}) {% endif %}
+        {% if award %} ({{ award }}) {% endif %}
+        {% if certificate %} [<a href="{{certificate}}">{{ text_plain.certificate }}</a>] {% endif %}
+        {% if link %} [<a href="{{link}}">link</a>] {% endif %}
     </li>
 {% endfor %}
 </ol>

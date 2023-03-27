@@ -2,9 +2,9 @@
 layout: default
 ---
 
-{% assign default = site.data.info["default"] %}
-{% assign info = site.data.info[page.language] %}
-{% assign text = site.data.text[page.language] %}
+{% assign info = site.data.info %}
+{% assign text_section = site.data.text.section[page.language] %}
+{% assign text_plain = site.data.text.plain[page.language] %}
 
 {% capture emphasize-name %}
     {% include emphasize.html %}
@@ -13,15 +13,17 @@ layout: default
 {% include head.html %}
 
 <body onload="bold()">
-    <h1 id="name"><a href="/">{{ info.name }}</a></h1>
+    <h1 id="name"><a href="/">{{ info.name[page.language] }}</a></h1>
 
     {% include nav.html %}
 
 <ul style="list-style-type:none">
-    <li>email: <a href="mailto:{{ info.email | default: default.email }}">{{ info.email | default: default.email }}</a></li>    
+    <li>email: <a href="mailto:{{ info.email }}">{{ info.email }}</a></li>    
 </ul>
 
-{{ page.description }}
+<p>
+    {{ page.description }}
+</p>
 
 {% include cv/education.html %}
 

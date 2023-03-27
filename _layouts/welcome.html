@@ -7,13 +7,13 @@ layout: default
 
 {% include head.html %}
 
-{% for lang in info %}
+{% for lang in info.name %}
     {% if lang[0] == "default" %} {% continue %} {% endif %}
-    <h1><a href="/{{lang[0]}}">{{ lang[1].name }}</a></h1>
+    <h1><a href="/{{lang[0]}}">{{ lang[1] }}</a></h1>
 
     {% assign la = lang[0] %}
     <ol>
-    {% for text in text[la] %}
+    {% for text in text.section[la] %}
         <li>
             <a href="/{{lang[0]}}/#{{text[0]}}">{{ text[1] }}</a>
         </li>

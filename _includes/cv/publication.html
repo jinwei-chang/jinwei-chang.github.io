@@ -1,20 +1,21 @@
 {% assign journal_paper = info.publication.journal | default: default.publication.journal %}
 {% assign conference_paper = info.publication.conference | default: default.publication.conference %}
 
-<h2 id="publication">{{ text.publication }}</h2>
+<h2 id="publication">{{ text_section.publication }}</h2>
 
-<h3 id="journal_paper">{{ text.journal_paper }}</h3>
+<h3 id="journal_paper">{{ text_section.journal_paper }}</h3>
 <ol>
 {% for paper in journal_paper %}
     <li>
         {{ paper.author }}, "{{ paper.title}}," <i>{{ paper.publication }}</i>. 
         {% if paper.note %} ({{ paper.note }}) {% endif %}
         {% if paper.importance %} ({{ paper.importance }}) {% endif %}
+        {% if paper.doi %} [<a href="https://doi.org/{{paper.doi}}">{{paper.doi}}</a>] {% endif %}
     </li>
 {% endfor %}
 </ol>
 
-<h3 id="conference_paper">{{ text.conference_paper }}</h3>
+<h3 id="conference_paper">{{ text_section.conference_paper }}</h3>
 <ol>
 {% for paper in conference_paper%}
     <li>

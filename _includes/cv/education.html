@@ -1,11 +1,18 @@
-{% assign text = site.data.text[page.language] | default: site.data.text["default"] %}
-{% assign education = site.data.info[page.language].education | default: site.data.info["default"].education %}
+{% assign education_list = site.data.info.education %}
 
-<h2 id="education">{{ text.education }}</h2>
+<h2 id="education">{{ text_section.education }}</h2>
 <ol>
-{% for school in education %}
+{% for education_item in education_list %}
+    {% assign degree = education_item.degree[page.language] | default: education_item.degree["default"] %}
+    {% assign department = education_item.department[page.language] | default: education_item.department["default"] %}
+    {% assign name = education_item.name[page.language] | default: education_item.name["default"] %}
+    {% assign from = education_item.from[page.language] | default: education_item.from["default"] %}
+    {% assign end = education_item.end[page.language] | default: education_item.end["default"] %}
     <li>
-        {{ school.degree }}, {{ school.department }}, {{ school.name }}, {{ school.from }} ~ {{ school.end }}
+        {{ degree }},
+        {{ department }}, 
+        {{ name }}, 
+        {{ from }} ~ {{ end }}
     </li>
 {% endfor %}
 </ol>
