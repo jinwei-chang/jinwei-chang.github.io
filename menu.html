@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <!-- <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1"> -->
+        <meta name="viewport" content="width=device-width, initial-scale=0.5">
+        <title>Bootstrap demo</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    
+        <script src="https://test.heymatch.xyz/assets/menu.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+        <script>
+            
+            window.onload = function(){
+                /*fetch("assets/menu.json").then(function(res){
+                    console.log(res)
+                })*/
+                console.log(menu_data)
+
+                var pre = document.getElementById("menu").innerHTML
+                // var text = ""
+                var text = "" + $("body").width() + " " + $("body").height()
+                for(var category_i in menu_data){
+                    var category = menu_data[category_i]
+                    if(category["類別_英文"] == "OAT MILK"){
+                        text += "<table class='table'>"
+                    }
+                    else
+                        text += "<table class='table'>"
+                    text += `<caption><h2>${category["類別"]} ${category["類別_英文"]}</h2></caption>`
+                    for(var item_i in category["品項"]){
+                        var item = category["品項"][item_i]
+                        text += "<tr>"
+                        text += `<td><span class="item_chinese">${item["中文"]}</span><br>${item["英文"]}</td>`
+                        text += `<td style="text-align: right">$${item["價格"]}</td>`
+                        text += "<tr>"
+                    }
+                    text += "</table>"
+                }
+
+                document.getElementById("menu").innerHTML = text + pre
+            }
+        </script>
+    </head>
+    <body style="background-color: green;">
+        <!-- <div class="container">
+            <img src="assets/logo.png" class="img-fluid" alt="logo" >
+        </div> -->
+        <div class="container" style="max-width: 100vw; height: 100vh; background-color: yellow; margin: 0; padding: 0; overflow-x: auto; overflow-y: hidden;">
+            <div id="menu" style="max-width: 100vh; width: 100vh; transform: rotate(-90deg) translate(-100%, 0); margin: 0px; padding: 0px; overflow: auto; transform-origin: 0 0; background-color: skyblue;">
+
+            </div>
+        </div>
+        
+
+        <!-- <div id="menu" >
+
+        </div> -->
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+    </body>
+</html>
