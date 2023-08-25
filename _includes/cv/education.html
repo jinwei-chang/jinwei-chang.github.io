@@ -1,4 +1,4 @@
-{% assign education_list = site.data.info.education %}
+{% assign education_list = site.data.resume.education | default: site.data.resume.default.education %}
 
 <h2 id="education">{{ text_section.education }}</h2>
 <ol>

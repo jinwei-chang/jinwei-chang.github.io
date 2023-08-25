@@ -2,7 +2,7 @@
 layout: default
 ---
 
-{% assign info = site.data.info %}
+{% assign resume = site.data.resume %}
 {% assign text_section = site.data.text.section[page.language] %}
 {% assign text_plain = site.data.text.plain[page.language] %}
 
@@ -10,29 +10,30 @@ layout: default
     {% include emphasize.html %}
 {% endcapture %}
 
-{% include head.html %}
+<div class="container">
+    <ul style="list-style-type:none">
+        <li>email: <a href="mailto:{{ resume.email }}">{{ resume.email }}</a></li>    
+    </ul>
+</div>
+    
+<div class="container">    
+    <p>
+        {{ page.description }}
+    </p>
+</div>
 
-<body onload="bold()">
-    <h1 id="name"><a href="/">{{ info.name[page.language] }}</a></h1>
+<div class="container">
+    {% include cv/education.html %}
+</div>
 
-    {% include nav.html %}
+<div class="container">
+    {% include cv/publication.html %}
+</div>
 
-<ul style="list-style-type:none">
-    <li>email: <a href="mailto:{{ info.email }}">{{ info.email }}</a></li>    
-</ul>
-
-<p>
-    {{ page.description }}
-</p>
-
-{% include cv/education.html %}
-
-{% include cv/publication.html %}
-
-{% if page.resume.award %}
-    {% include cv/award.html %}
-{% endif %}
+<div class="container">
+    {% if page.resume.award %}
+        {% include cv/award.html %}
+    {% endif %}
+</div>
 
 {{ content }}
-
-</body>

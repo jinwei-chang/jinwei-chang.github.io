@@ -1,16 +1,16 @@
-body{
+/* body{
     font-family: "Noto Sans TC";
-}
+} */
 
-@media screen{
+/* @media screen{
     body{
         margin: auto;
         width: 61.8vw;
     }
-}
+} */
 
-@media print{
+/* @media print{
     nav{
         display: none;
     }
-}
+} */
