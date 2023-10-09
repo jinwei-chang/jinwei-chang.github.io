@@ -23,16 +23,22 @@ layout: default
 </div>
 
 <div class="container">
-    {% include cv/education.html %}
+    {% include cv/education.liquid %}
 </div>
 
 <div class="container">
-    {% include cv/publication.html %}
+    {% include cv/publication.liquid %}
 </div>
 
 <div class="container">
     {% if page.resume.award %}
-        {% include cv/award.html %}
+        {% include cv/award.liquid %}
+    {% endif %}
+</div>
+
+<div class="container">
+    {% if page.resume.programming %}
+        {% include cv/programming.liquid %}
     {% endif %}
 </div>
 

@@ -1,0 +1,12 @@
+{% assign item_list = resume.programming %}
+
+<h2 id="sec-programming">{{ text_section.programming }}</h2>
+
+<ol>
+{% for item in item_list %}
+    {% assign title = item.title[page.language] | default: item.title %}
+    <li>
+        {{ title }}
+    </li>
+{% endfor %}
+</ol>

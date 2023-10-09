@@ -6,7 +6,8 @@
             "conference_paper": "Conference Paper",
             "journal_paper": "Journal Paper",
             "award": "Award",
-            "project": "Project"
+            "project": "Project",
+            "programming": "Programming"
         },
         "zh-tw": {
             "education": "學歷",
@@ -14,7 +15,8 @@
             "conference_paper": "會議論文",
             "journal_paper": "期刊論文",
             "award": "獎項",
-            "project": "專題"
+            "project": "專題",
+            "programming": "程式"
         }
     },
     "plain": {

@@ -66,18 +66,19 @@
         </div>
 
         {{ content }}
-        
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
         <script>
-            function bold(){
+            $(document).ready(function(){
                 var toReplace = "{% for name in site.data.resume.name %}{{ name[1] }} {% endfor %}".trim().split(' ');
                 //var toReplace = "{{ site.data.info.name[page.language] | default: site.data.info.name['default'] }}".trim().split(' ');
                 for(var i in toReplace){
                     console.log(toReplace[i])
                     document.body.innerHTML = document.body.innerHTML.replaceAll(toReplace[i], `<b>${toReplace[i]}</b>`);
                 }
-            }
-            bold()
+            })
+
         </script>
     </body>
 </html>

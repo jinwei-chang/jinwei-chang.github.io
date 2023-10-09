@@ -146,5 +146,10 @@
                 "default": "http://iccad-contest.org/2021/tw/"
             }
         }
+    ],
+    "programming": [
+        {
+            "title": "Verilog Simulation Optimization via Instruction Reduction"
+        }
     ]
 }
