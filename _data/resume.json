@@ -115,7 +115,8 @@
                 "default": "2022"
             },
             "work": {
-                "default": "尋找花中君子-蘭花種類辨識與分類競賽"
+                "default": "Looking for a Gentleman in Flowers - Orchid Species Identification and Classification",
+                "zh-tw": "尋找花中君子-蘭花種類辨識與分類競賽"
             },
             "award": {
                 "default": "Honorable Mention",
@@ -149,7 +150,14 @@
     ],
     "programming": [
         {
-            "title": "Verilog Simulation Optimization via Instruction Reduction"
+            "title": "Skyrmion Racetrace Memory on B+ Tree Simulator",
+            "main_program_lang": "C++",
+            "description": "Simulate the behaviors on B+ tree indexing scheme of the advanced memory material, skyrmion racetrack memory, and collect the memory operations to analyze the energy consumption and latency with different algorithms."
+        },
+        {
+            "title": "Verilog Simulation Optimization via Instruction Reduction",
+            "main_program_lang": "C++",
+            "description": "Reduce code size of verilog files and keep the input and output logic with same logic effect."
         }
     ]
 }
