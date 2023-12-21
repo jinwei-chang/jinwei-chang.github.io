@@ -5,8 +5,11 @@
 <ol>
 {% for item in item_list %}
     {% assign title = item.title[page.language] | default: item.title %}
+    {% assign description = item.description[page.language] | default: item.description %}
+    {% assign main_program_lang = item.main_program_lang[page.language] | default: item.main_program_lang %}
     <li>
-        {{ title }}
+        {{ title }}, {{ description }} <br>
+        programming language: {{ main_program_lang }}
     </li>
 {% endfor %}
 </ol>
