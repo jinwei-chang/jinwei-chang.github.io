@@ -14,7 +14,7 @@
         {
             "degree": {
                 "default": "Studying for M.S.",
-                "zh-tw": "碩士就讀中"
+                "zh-tw": "碩士"
             },
             "name": {
                 "default": "National Yang Ming Chiao Tung University",
@@ -28,8 +28,7 @@
                 "default": "2022"
             },
             "end": {
-                "default": "now",
-                "zh-tw": "現在"
+                "default": "2024"
             }
         },
         {
