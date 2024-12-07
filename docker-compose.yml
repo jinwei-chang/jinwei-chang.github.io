@@ -1,10 +1,12 @@
-version: "3"
 services:
     jekyll:
         image: jekyll/jekyll
         ports:
             - 4000:4000
+            - 35729:35729
         volumes:
-            - .:/srv/jekyll
-            # - ./vendor/bundle/:/usr/local/bundle
-        command: jekyll serve
+            - .:/srv/jekyll:Z
+            - ./vendor/bundle/:/usr/local/bundle:Z
+        environment:
+            - TZ=Asia/Taipei
+        command: jekyll serve --force_polling --livereload
