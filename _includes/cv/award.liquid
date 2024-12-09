@@ -1,17 +1,18 @@
-{% assign award_list = resume.award %}
+{% assign award_list = resume.award | sort: "year" | reverse %}
 
 <h2 id="award">{{ text_section.award }}</h2>
 <ol>
 {% for award_item in award_list %}
     {% assign title = award_item.title[page.language] | default: award_item.title["default"] %}
-    {% assign year = award_item.year[page.language] | default: award_item.year["default"] %}
+    {% assign year = award_item.year %}
     {% assign work = award_item.work[page.language] | default: award_item.work["default"] %}
     {% assign grade = award_item.grade[page.language] | default: award_item.grade["default"] %}
     {% assign award = award_item.award[page.language] | default: award_item.award["default"] %}
     {% assign certificate = award_item.certificate[page.language] | default: award_item.certificate["default"] %}
     {% assign link = award_item.link[page.language] | default: award_item.link["default"] %}
     <li>
-        {{ title }}, {{ year }}, {{ work }}
+        {{ title }}, {{ year }},
+        {% if work %} {{ work }} {% endif %}
         {% if grade %} ({{ grade }}) {% endif %}
         {% if award %} ({{ award }}) {% endif %}
         {% if certificate %} [<a href="{{certificate}}">{{ text_plain.certificate }}</a>] {% endif %}

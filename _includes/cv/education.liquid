@@ -6,8 +6,8 @@
     {% assign degree = item.degree[page.language] | default: item.degree["default"] %}
     {% assign department = item.department[page.language] | default: item.department["default"] %}
     {% assign name = item.name[page.language] | default: item.name["default"] %}
-    {% assign from = item.from[page.language] | default: item.from["default"] %}
-    {% assign end = item.end[page.language] | default: item.end["default"] %}
+    {% assign from = item.from[page.language] | default: item.from %}
+    {% assign end = item.end[page.language] | default: item.end %}
     <li>
         {{ degree }},
         {{ department }}, 

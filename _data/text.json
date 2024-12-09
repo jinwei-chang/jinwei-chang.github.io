@@ -3,6 +3,7 @@
         "en": {
             "education": "Education",
             "publication": "Publication",
+            "master_thesis": "Master Thesis",
             "conference_paper": "Conference Paper",
             "journal_paper": "Journal Paper",
             "award": "Award",
@@ -12,6 +13,7 @@
         "zh-tw": {
             "education": "學歷",
             "publication": "著作",
+            "master_thesis": "碩士論文",
             "conference_paper": "會議論文",
             "journal_paper": "期刊論文",
             "award": "獎項",

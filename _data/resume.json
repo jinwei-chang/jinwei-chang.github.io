@@ -4,11 +4,6 @@
         "en": "Jin-Wei Chang",
         "zh-tw": "張晉瑋"
     },
-    "description": {
-        "default": "",
-        "en": "Jin-Wei Chang received the B.S. degree in computer science from the Department of Computer Science and Engineering, Yuan Ze University. He is currently studying for the M.S. degree in computer science at the Department of Computer Science, National Yang Ming Chiao Tung University. His research interests include emerging memory and storage technologies.",
-        "zh-tw": "張晉瑋，2024年於國立陽明交通大學資訊科學與工程研究所取得碩士學位，2018年於元智大學資訊工程學系取得學士學位。研究興趣包含嵌入式系統、邊緣人工智慧、新興記憶體技術。"
-    },
     "email": "jinwei.chang1221@gmail.com",
     "education": [
         {
@@ -24,12 +19,8 @@
                 "default": "Computer Science",
                 "zh-tw": "資訊科學與工程研究所"
             },
-            "from": {
-                "default": "2022"
-            },
-            "end": {
-                "default": "2024"
-            }
+            "from": 2022,
+            "end": 2024
         },
         {
             "degree": {
@@ -44,15 +35,18 @@
                 "default": "Computer Science and Engineering",
                 "zh-tw": "資訊工程學系"
             },
-            "from": {
-                "default": "2018"
-            },
-            "end": {
-                "default": "2022"
-            }
+            "from": 2018,
+            "end": 2022
         }
     ],
     "publication": {
+        "master_thesis": {
+            "title": {
+                "default": "A Hybrid Strategy for Dynamic Neural Network Inferencing on Energy-Harvesting Devices",
+                "zh-tw": "動態神經網路推論於能源採集裝置之混合策略"
+            },
+            "link": "https://hdl.handle.net/20.500.14371/3830"
+        },
         "journal": [
             {
                 "author": "Jin-Wei Chang and Tseng-Yi Chen",
@@ -77,18 +71,13 @@
             "title": {
                 "default": "Kaggle Competition"
             },
-            "year": {
-                "default": "2022"
-            },
+            "year": 2022,
             "work": {
                 "default": "JPX Tokyo Stock Exchange Prediction"
             },
             "award": {
                 "default": "Silver Medal",
                 "zh-tw": "銀獎"
-            },
-            "rank": {
-                "default": "2022"
             },
             "total": {
                 "default": "2022"
@@ -99,9 +88,7 @@
                 "default": "College Student Research Creativity Award",
                 "zh-tw": "大專學生研究創作獎"
             },
-            "year": {
-                "default": "2022"
-            },
+            "year": 2022,
             "work": {
                 "default": "於斯格明子賽道記憶體技術上優化B+樹索引架構"
             }
@@ -110,9 +97,7 @@
             "title": {
                 "default": "AI CUP"
             },
-            "year": {
-                "default": "2022"
-            },
+            "year": 2022,
             "work": {
                 "default": "Looking for a Gentleman in Flowers - Orchid Species Identification and Classification",
                 "zh-tw": "尋找花中君子-蘭花種類辨識與分類競賽"
@@ -132,9 +117,7 @@
             "title": {
                 "default": "ICCAD CAD Contest"
             },
-            "year": {
-                "default": "2021"
-            },
+            "year": 2021,
             "work": {
                 "default": "Problem F - Verilog Simulation Optimization via Instruction Reduction"
             },
@@ -145,18 +128,36 @@
             "link": {
                 "default": "http://iccad-contest.org/2021/tw/"
             }
+        },
+        {
+            "title": {
+                "default": "Taiwan National Contest for Private Universities (NCPU)",
+                "zh-tw": "全國私立大專校院程式競賽"
+            },
+            "year": 2020,
+            "award": {
+                "default": "Silver Award",
+                "zh-tw": "銀獎"
+            }
         }
     ],
     "programming": [
         {
             "title": "Skyrmion Racetrace Memory on B+ Tree Simulator",
             "main_program_lang": "C++",
-            "description": "Simulate the behaviors on B+ tree indexing scheme of the advanced memory material, skyrmion racetrack memory, and collect the memory operations to analyze the energy consumption and latency with different algorithms."
+            "description": "Simulate the behaviors on B+ tree indexing scheme of the advanced memory material, skyrmion racetrack memory, and collect the memory operations to analyze the energy consumption and latency with different algorithms.",
+            "link": "https://github.com/jinwei-chang/Skyrmion-on-B-plus-tree-Simulator"
         },
         {
             "title": "Verilog Simulation Optimization via Instruction Reduction",
             "main_program_lang": "C++",
-            "description": "Reduce code size of verilog files and keep the input and output logic with same logic effect."
+            "description": "Reduce code size of verilog files and keep the input and output logic with same logic effect.",
+            "link": "https://github.com/jinwei-chang/Verilog-Simulation-Optimization-via-Instruction-Reduction"
+        },
+        {
+            "title": "Dynamic Neural Networks on Energy Harvesting Devices",
+            "main_program_lang": "C, C++, Python, MSP430",
+            "description": " The programming project for the thesis experiment. We implement the dynamic neural networks on the TI MSP430FR5994 evaluation board with SRAM and FRAM, and we design a circuit to simulate an energy harvesting environment.This project includes training a neural network, converting TensorFlow model to quantized model to fit on the MCU, and implementing dynamic neural network and hybrid strategy on the MCU."
         }
     ]
 }

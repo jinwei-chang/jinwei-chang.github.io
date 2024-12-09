@@ -8,9 +8,11 @@
     {% assign description = item.description[page.language] | default: item.description %}
     {% assign main_program_lang = item.main_program_lang[page.language] | default: item.main_program_lang %}
     <li>
-        <h3>{{ title }}</h3>
-        {{ description }} <br>
-        programming language: {{ main_program_lang }}
+        <b>{{ title }}</b>
+        <ul>
+            <li>{{ description }}</li>
+            <li>programming language: {{ main_program_lang }}</li>
+        </ul>      
     </li>
 {% endfor %}
 </ol>

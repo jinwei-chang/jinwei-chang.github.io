@@ -3,6 +3,14 @@
 
 <h2 id="publication">{{ text_section.publication }}</h2>
 
+<h3 id="master_thesis">{{ text_section.master_thesis }}</h3>
+<ul>
+    <li>
+        {{ resume.publication.master_thesis.title[page.language] | default: resume.publication.master_thesis.title["default"] }}
+        {% if resume.publication.master_thesis.link %} [<a href="{{resume.publication.master_thesis.link}}">{{resume.publication.master_thesis.link}}</a>] {% endif %}
+    </li>
+</ul>
+
 <h3 id="journal_paper">{{ text_section.journal_paper }}</h3>
 <ol>
 {% for paper in journal_paper %}
