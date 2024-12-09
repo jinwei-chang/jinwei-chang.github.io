@@ -8,7 +8,7 @@
     "education": [
         {
             "degree": {
-                "default": "Studying for M.S.",
+                "default": "M.S.",
                 "zh-tw": "碩士"
             },
             "name": {
