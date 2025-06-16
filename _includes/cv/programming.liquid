@@ -5,13 +5,20 @@
 <ol>
 {% for item in item_list %}
     {% assign title = item.title[page.language] | default: item.title %}
+    {% assign link = item.link %}
     {% assign description = item.description[page.language] | default: item.description %}
-    {% assign main_program_lang = item.main_program_lang[page.language] | default: item.main_program_lang %}
+    {% assign techniques = item.main_program_lang[page.language] | default: item.main_program_lang %}
+
     <li>
         <b>{{ title }}</b>
         <ul>
+            {% if link %}<li>link: <a href="{{ link }}">{{ link }}</a></li>{% endif %}
+            <li>techniques: 
+                {% for item in techniques %}
+                    <b>{{ item }}</b>
+                {% endfor %}
+            </li>
             <li>{{ description }}</li>
-            <li>programming language: {{ main_program_lang }}</li>
         </ul>      
     </li>
 {% endfor %}

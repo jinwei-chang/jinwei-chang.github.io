@@ -150,14 +150,20 @@
         },
         {
             "title": "Verilog Simulation Optimization via Instruction Reduction",
-            "main_program_lang": "C++",
+            "main_program_lang": ["C++", "Compiler"],
             "description": "Reduce code size of verilog files and keep the input and output logic with same logic effect.",
             "link": "https://github.com/jinwei-chang/Verilog-Simulation-Optimization-via-Instruction-Reduction"
         },
         {
             "title": "Dynamic Neural Networks on Energy Harvesting Devices",
-            "main_program_lang": "C, C++, Python, MSP430",
+            "main_program_lang": ["C", "C++", "Python", "TI MSP430FR5994", "TensorFlow"],
             "description": " The programming project for the thesis experiment. We implement the dynamic neural networks on the TI MSP430FR5994 evaluation board with SRAM and FRAM, and we design a circuit to simulate an energy harvesting environment.This project includes training a neural network, converting TensorFlow model to quantized model to fit on the MCU, and implementing dynamic neural network and hybrid strategy on the MCU."
+        },
+        {
+            "title": "EasyTools",
+            "link": "https://easytools1221.github.io",
+            "main_program_lang": ["HTML", "CSS", "JavaScript", "Bootstrap","Jekyll", "PWA", "Google Analytics", "Google Adsense"],
+            "description": "My website hosts on the Github Page to provide some convenitent tools to help people solve problems in their lives."
         }
     ]
 }
