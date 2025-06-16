@@ -49,7 +49,13 @@
         },
         "journal": [
             {
-                "author": "Jin-Wei Chang and Tseng-Yi Chen",
+                "author": "Hong-Yi Chen, <b>Jin-Wei Chang</b>, Hong-Ruei Lin, and Li-Pin Chang",
+                "title": "Graceful CNN Model Degradation in Uncorrected Flash Storage for Embedded Edge Devices",
+                "publication": "ACM Transactions on Storage (TOS)",
+                "note": "Just accpeted"
+            },
+            {
+                "author": "<b>Jin-Wei Chang</b> and Tseng-Yi Chen",
                 "title": "When B+-tree Meets Skyrmion Memory: How Skyrmion Memory Affects an Indexing Scheme",
                 "publication": "IEEE Transactions on Computer-Aided Design of Integrated Circuits and Systems (TCAD), vol. 41, no. 11, pp. 3814-3825",
                 "doi": "10.1109/TCAD.2022.3197519",
@@ -58,7 +64,7 @@
         ],
         "conference": [
             {
-                "author": "Jin-Wei Chang and Tseng-Yi Chen",
+                "author": "<b>Jin-Wei Chang</b> and Tseng-Yi Chen",
                 "title": "When B+-tree Meets Skyrmion Memory: How Skyrmion Memory Affects an Indexing Scheme",
                 "publication": "ACM/IEEE CODES+ISSS 2022",
                 "note": "Integrated with Computer-Aided Design of Integrated Circuits and Systems (TCAD)",
@@ -144,26 +150,39 @@
     "programming": [
         {
             "title": "Skyrmion Racetrace Memory on B+ Tree Simulator",
-            "main_program_lang": "C++",
-            "description": "Simulate the behaviors on B+ tree indexing scheme of the advanced memory material, skyrmion racetrack memory, and collect the memory operations to analyze the energy consumption and latency with different algorithms.",
+            "main_program_lang": ["C++", "Simulator"],
+            "description": {
+                "default": "Simulate the behaviors on B+ tree indexing scheme of the advanced memory material, skyrmion racetrack memory, and collect the memory operations to analyze the energy consumption and latency with different algorithms.",
+                "zh-tw": "斯格明子軌道記憶體(Skyrmion Racetrack Memory)，是一種新興記憶體材質。 <br>我們提出Skyrmion在B+ Tree索引架構的問題，包含不必要的移動以及寫入操作，並利用記憶體特性提出一個更低延遲，以及更低耗能的解決方案。實驗方法利用C++撰寫模擬器，實作B+ Tree資料結構及演算法，並模擬Skyrmion記憶體行為，獲得不同演算法在記憶體上的延遲以及耗能開銷，以證明改進的演算法是有效的。"
+            },
             "link": "https://github.com/jinwei-chang/Skyrmion-on-B-plus-tree-Simulator"
         },
         {
             "title": "Verilog Simulation Optimization via Instruction Reduction",
             "main_program_lang": ["C++", "Compiler"],
-            "description": "Reduce code size of verilog files and keep the input and output logic with same logic effect.",
+            "description": {
+                "default": "Reduce code size of verilog files and keep the input and output logic with same logic effect.",
+                "zh-tw": "目標是分析verilog進行程式碼縮減，並維持電路邏輯相同。 <br>我的方法主要是建立graph資料結構表示完整電路，再利用數位邏輯(如：AND, OR, XOR等)的運算特性進行簡化，以達到縮減程式碼的目標。解決方案的實作，利用C++建立數位邏輯資料結構，並設計縮減演算法。使得程式可以分析程式碼，並在縮減後仍維持正確的輸出。"
+            },
             "link": "https://github.com/jinwei-chang/Verilog-Simulation-Optimization-via-Instruction-Reduction"
         },
         {
             "title": "Dynamic Neural Networks on Energy Harvesting Devices",
-            "main_program_lang": ["C", "C++", "Python", "TI MSP430FR5994", "TensorFlow"],
-            "description": " The programming project for the thesis experiment. We implement the dynamic neural networks on the TI MSP430FR5994 evaluation board with SRAM and FRAM, and we design a circuit to simulate an energy harvesting environment.This project includes training a neural network, converting TensorFlow model to quantized model to fit on the MCU, and implementing dynamic neural network and hybrid strategy on the MCU."
+            "main_program_lang": ["C", "C++", "Python", "TensorFlow", "TI MSP430FR5994", "Arduino"],
+            "description": {
+                "default": "The programming project for the thesis experiment. We implement the dynamic neural networks on the TI MSP430FR5994 evaluation board with SRAM and FRAM, and we design a circuit to simulate an energy harvesting environment.This project includes training a neural network, converting TensorFlow model to quantized model to fit on the MCU, and implementing dynamic neural network and hybrid strategy on the MCU.",
+                "zh-tw": "實驗架設主要是AI的應用(如：影像辨識、聲音辨識、動作辨識)，並且加入動態調整工作量機制。然而開發板上的記憶體非常小只有256KB，因此需要先將神經網路模型壓縮輕量化，才可以實作在開發板上。 <br>過程中使用python架設與訓練模型，並且做模型壓縮。用C++模擬神經網路運算，快速為開發版偵錯。開發板上使用C實作，包含把壓縮模型寫入，實作convoluion, fully connected，並且使用板子上的硬體加速器為向量運算加速。最後是跟論文相關的功能，包含利用ADC偵測電壓、訓練與實作early-exit模型、實作動態量化模型。 <br>實驗架設的過程中有許多考量，包含要如何重現同樣的輸入功率，而研究如何使用太陽能板並且利用ADC蒐集電壓與電流資訊。還有如何模擬經過穩壓之後的電流，透過可程式化的電源供應器再現，並且需要自己接電容器作為電池，利用三極體作為充電完成的開關。硬體電路設計方面充分利用自己在大學的電子電路知識，讓實驗配置合理化，也與台科大的研究生合作學習環境架設。 <br>為了讓論文實驗可以更自動化，也研究了如何用python控制電源供應器，讀取Arduino UART得到實驗數據所需要的電壓監測。並且得到數據之後，利用GUI介面，將實驗數據即時畫圖表，評估實驗是否符合預期。"
+            } 
         },
         {
             "title": "EasyTools",
             "link": "https://easytools1221.github.io",
             "main_program_lang": ["HTML", "CSS", "JavaScript", "Bootstrap","Jekyll", "PWA", "Google Analytics", "Google Adsense"],
-            "description": "My website hosts on the Github Page to provide some convenitent tools to help people solve problems in their lives."
+            "description": {
+                "default": "My website hosts on the Github Page to provide some convenitent tools to help people solve problems in their lives.",
+                "zh-tw": "建立在GitHub Page，提供線上小工具給使用者，解決生活上的瑣事問題。"
+            } 
+            
         }
     ]
 }
