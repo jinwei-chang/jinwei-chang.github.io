@@ -28,48 +28,8 @@
 
     </head>
     <body>
-        <div class="container">
-        <nav class="navbar navbar-expand-lg">
-            <div class="container-fluid">
-                <a id="name" class="navbar-brand" href="/">Resume</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                    <ul class="navbar-nav">
-                        <a class="nav-link" href="#education">{{ text_section.education }}</a>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#publication" role="button" data-bs-toggle="dropdown" aria-expanded="false">{{ text_section.publication }}</a>
-                            <ul class="dropdown-menu">
-                                <li> <a class="nav-link" href="#conference_paper">{{ text_section.conference_paper }}</a> </li>
-                                <li> <a class="nav-link" href="#journal_paper">{{ text_section.journal_paper }}</a> </li>
-                            </ul>
-                        </li>
-                        <a class="nav-link" href="#award">{{ text_section.award }}</a>
-                        <a class="nav-link" href="/zh-tw">繁體中文</a>
-                        <a class="nav-link" href="/">English</a>
-                    </ul>
-                </div>
-            </div>
-            <!-- <ul class="navbar-nav">
-                <li>
-                    Language
-                    <ul>
-                        <li><a href="/zh-tw/">中文</a></li>
-                        <li><a href="/">English</a></li>
-                    </ul>
-                </li>
-                <li> <a href="#education">{{ text_section.education }}</a> </li>
-                <li> <a href="#publication">{{ text_section.publication }}</a> </li>
-                    <ul>
-                        <li> <a href="#conference_paper">{{ text_section.conference_paper }}</a> </li>
-                        <li> <a href="#journal_paper">{{ text_section.journal_paper }}</a> </li>
-                    </ul>
-                <li> <a href="#award">{{ text_section.award }}</a> </li>
-            </ul> -->
-        </nav>
-        </div>
-        
+        {% include navbar.liquid %} 
+
         <div class="container">
             <h1>{{ resume.name[page.language] }}</h1>
         </div>

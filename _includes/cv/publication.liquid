@@ -1,20 +1,18 @@
 {% assign journal_paper = resume.publication.journal | default: default.publication.journal %}
 {% assign conference_paper = resume.publication.conference | default: default.publication.conference %}
 
-<h2 id="publication">{{ text_section.publication }}</h2>
-
-<h3 id="master_thesis">{{ text_section.master_thesis }}</h3>
-<ul>
-    <li>
+<h3 id="subsec-master_thesis">{{ text_section.master_thesis }}</h3>
+<ul class="list-group list-group-flush">
+    <li class="list-group-item">
         {{ resume.publication.master_thesis.title[page.language] | default: resume.publication.master_thesis.title["default"] }}
         {% if resume.publication.master_thesis.link %} [<a href="{{resume.publication.master_thesis.link}}">{{resume.publication.master_thesis.link}}</a>] {% endif %}
     </li>
 </ul>
 
-<h3 id="journal_paper">{{ text_section.journal_paper }}</h3>
-<ol>
+<h3 id="subsec-journal_paper">{{ text_section.journal_paper }}</h3>
+<ol class="list-group list-group-numbered list-group-flush">
 {% for paper in journal_paper %}
-    <li>
+    <li class="list-group-item">
         {{ paper.author }}, "{{ paper.title}}," <i>{{ paper.publication }}</i>. 
         {% if paper.note %} ({{ paper.note }}) {% endif %}
         {% if paper.importance %} ({{ paper.importance }}) {% endif %}
@@ -23,10 +21,10 @@
 {% endfor %}
 </ol>
 
-<h3 id="conference_paper">{{ text_section.conference_paper }}</h3>
-<ol>
+<h3 id="subsec-conference_paper">{{ text_section.conference_paper }}</h3>
+<ol class="list-group list-group-numbered list-group-flush">
 {% for paper in conference_paper%}
-    <li>
+    <li class="list-group-item">
         {{ paper.author }}, "{{ paper.title}}," <i>{{ paper.publication }}</i>. 
         {% if paper.note %} ({{ paper.note }}) {% endif %}
         {% if paper.importance %} ({{ paper.importance }}) {% endif %}

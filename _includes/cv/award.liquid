@@ -1,7 +1,6 @@
 {% assign award_list = resume.award | sort: "year" | reverse %}
 
-<h2 id="award">{{ text_section.award }}</h2>
-<ol>
+<ol class="list-group list-group-flush">
 {% for award_item in award_list %}
     {% assign title = award_item.title[page.language] | default: award_item.title["default"] %}
     {% assign year = award_item.year %}
@@ -10,7 +9,7 @@
     {% assign award = award_item.award[page.language] | default: award_item.award["default"] %}
     {% assign certificate = award_item.certificate[page.language] | default: award_item.certificate["default"] %}
     {% assign link = award_item.link[page.language] | default: award_item.link["default"] %}
-    <li>
+    <li class="list-group-item">
         {{ title }}, {{ year }},
         {% if work %} {{ work }} {% endif %}
         {% if grade %} ({{ grade }}) {% endif %}

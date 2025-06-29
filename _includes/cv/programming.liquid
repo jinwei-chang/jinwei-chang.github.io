@@ -1,15 +1,14 @@
 {% assign item_list = resume.programming %}
 
-<h2 id="sec-programming">{{ text_section.programming }}</h2>
 
-<ol>
+<ol class="list-group list-group-numbered list-group-flush">
 {% for item in item_list %}
     {% assign title = item.title[page.language] | default: item.title %}
     {% assign link = item.link %}
     {% assign description = item.description[page.language] | default: item.description.default  %}
     {% assign techniques = item.main_program_lang[page.language] | default: item.main_program_lang %}
 
-    <li>
+    <li class="list-group-item">
         <b>{{ title }}</b>
         <ul>
             {% if link %}<li>link: <a href="{{ link }}">{{ link }}</a></li>{% endif %}

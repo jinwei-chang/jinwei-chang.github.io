@@ -2,7 +2,7 @@ services:
     jekyll:
         image: bretfisher/jekyll-serve
         ports:
-            - 11180:4001
+            - 11181:4000
             - 35730:35730
         volumes:
             - .:/site:Z
@@ -10,4 +10,4 @@ services:
             - ./vendor/bundle/:/usr/local/bundle:Z
         environment:
             - TZ=Asia/Taipei
-        command: jekyll serve --force_polling -H 0.0.0.0 --port 4001 
+        command: jekyll serve --force_polling -H 0.0.0.0 --port 4000
