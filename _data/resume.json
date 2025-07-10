@@ -52,6 +52,7 @@
                 "author": "Hong-Yi Chen, <b>Jin-Wei Chang</b>, Hong-Ruei Lin, and Li-Pin Chang",
                 "title": "Graceful CNN Model Degradation in Uncorrected Flash Storage for Embedded Edge Devices",
                 "publication": "ACM Transactions on Storage (TOS)",
+                "doi": "10.1145/3747298",
                 "note": "Just accpeted"
             },
             {
