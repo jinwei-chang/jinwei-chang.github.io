@@ -1,0 +1,103 @@
+---
+import Resume from "@layouts/Resume.astro";
+
+import { getEntry } from "astro:content";
+
+export async function getStaticPaths() {
+  return [
+    { params: { lang: "en" } },
+    { params: { lang: "zh-tw" } },
+  ];
+}
+
+const { lang } = Astro.params;
+
+const default_entry = await getEntry("resume", "en");
+const entry = await getEntry("resume", lang ?? "en");
+
+if(!default_entry) {
+  throw new Error(`Default resume not found for language: en`);
+}
+if (!entry) {
+  throw new Error(`Resume not found for language: ${lang}`);
+}
+
+const data = {
+  ...default_entry.data,
+  ...entry.data,
+  publications: {
+    ...default_entry.data.publications,
+    ...entry.data.publications,
+    journals: entry.data.publications?.journals ?? default_entry.data.publications?.journals,
+    conferences: entry.data.publications?.conferences ?? default_entry.data.publications?.conferences
+  },
+};
+
+
+---
+
+<Resume>
+    <nav class="mb-8">
+        <a href={`/${lang}/`}>Resume</a>
+        <div class="inline-block mx-2">
+            {lang === "en" ? (
+                <a href="/zh-tw/">繁體中文</a>
+            ) : (
+                <a href="/en/">English</a>
+            )}
+        </div>
+    </nav>
+    <div class="grid grid-cols-1 gap-4">
+        <div>
+            <h1>{ data.name }</h1>
+            Email: { data.email }<br />
+        </div>
+        <div>
+            <h2 id="education">Education</h2>
+            { data.education && data.education.map((edu) => (
+                <div>
+                    <h3>{ edu.degree } - { edu.institution }</h3>
+                    <p>{ edu.department }</p>
+                    <p>{ edu.from } - { edu.end }</p>
+                </div>
+            )) }
+        </div>
+        <div>
+            <h2 id="publications">Publications</h2>
+            <h3>Master Thesis</h3>
+            { data.publications.master_thesis && (
+                <p>{ data.publications.master_thesis.title }</p>
+            ) }
+
+            { data.publications.journals && (
+                <>
+                    <h3>Journals</h3>
+                    { data.publications.journals.map((journal) => (
+                        <div class="mb-4">
+                            <p>{ journal.authors }</p>
+                            <p>{ journal.title }</p>
+                            <p>{ journal.publication }</p>
+                            <p>DOI: { journal.doi }</p>
+                            { journal.note && <p>{ journal.note }</p> }
+                        </div>
+                    )) }
+                </>
+            ) }
+
+            { data.publications.conferences && (
+                <>
+                    <h3>Conferences</h3>
+                    { data.publications.conferences.map((conf) => (
+                        <div class="mb-4">
+                            <p innerHTML={conf.authors}></p>
+                            <p>{ conf.title }</p>
+                            <p>{ conf.publication }</p>
+                            { conf.note && <p>{ conf.note }</p> }
+                        </div>
+                    )) }
+                </>
+            ) }
+        </div>
+    </div>
+
+</Resume>

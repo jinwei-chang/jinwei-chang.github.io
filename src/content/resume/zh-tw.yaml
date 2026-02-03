@@ -1,0 +1,74 @@
+name: 張晉瑋
+email: jinwei.chang1221@gmail.com
+education:
+  - degree: 碩士
+    institution: 國立陽明交通大學
+    department: 資訊科學與工程研究所
+    from: 2022
+    end: 2024
+  - degree: 學士
+    institution: 元智大學
+    department: 資訊工程學系
+    from: 2018
+    end: 2022
+publications:
+  master_thesis:
+    title: 動態神經網路推論於能源採集裝置之混合策略
+    link: https://hdl.handle.net/20.500.14371/3830
+awards:
+  - title: Kaggle Competition
+    year: 2022
+    work: JPX Tokyo Stock Exchange Prediction
+    award: 銀獎
+    total: "2022"
+  - title: 大專學生研究創作獎
+    year: 2022
+    work: 於斯格明子賽道記憶體技術上優化B+樹索引架構
+  - title: AI CUP
+    year: 2022
+    work: 尋找花中君子-蘭花種類辨識與分類競賽
+    award: 佳作
+    rank: "33"
+    certificate: https://global.turingcerts.com/co/cert?hash=8ef35ed3cb77f77da8fc547d453354c0efb976b7df509e4a5749a683afc9eaa6
+  - title: ICCAD CAD Contest
+    year: 2021
+    work: Problem F - Verilog Simulation Optimization via Instruction Reduction
+    award: 優等
+    link: http://iccad-contest.org/2021/tw/
+  - title: 全國私立大專校院程式競賽
+    year: 2020
+    award: 銀獎
+programming:
+  - title: Skyrmion Racetrace Memory on B+ Tree Simulator
+    main_program_lang:
+      - C++
+      - Simulator
+    description: 斯格明子軌道記憶體(Skyrmion Racetrack Memory)，是一種新興記憶體材質。 <br>我們提出Skyrmion在B+ Tree索引架構的問題，包含不必要的移動以及寫入操作，並利用記憶體特性提出一個更低延遲，以及更低耗能的解決方案。實驗方法利用C++撰寫模擬器，實作B+ Tree資料結構及演算法，並模擬Skyrmion記憶體行為，獲得不同演算法在記憶體上的延遲以及耗能開銷，以證明改進的演算法是有效的。
+    link: https://github.com/jinwei-chang/Skyrmion-on-B-plus-tree-Simulator
+  - title: Verilog Simulation Optimization via Instruction Reduction
+    main_program_lang:
+      - C++
+      - Compiler
+    description: 目標是分析verilog進行程式碼縮減，並維持電路邏輯相同。 <br>我的方法主要是建立graph資料結構表示完整電路，再利用數位邏輯(如：AND, OR, XOR等)的運算特性進行簡化，以達到縮減程式碼的目標。解決方案的實作，利用C++建立數位邏輯資料結構，並設計縮減演算法。使得程式可以分析程式碼，並在縮減後仍維持正確的輸出。
+    link: https://github.com/jinwei-chang/Verilog-Simulation-Optimization-via-Instruction-Reduction
+  - title: Dynamic Neural Networks on Energy Harvesting Devices
+    main_program_lang:
+      - C
+      - C++
+      - Python
+      - TensorFlow
+      - TI MSP430FR5994
+      - Arduino
+    description: 實驗架設主要是AI的應用(如：影像辨識、聲音辨識、動作辨識)，並且加入動態調整工作量機制。然而開發板上的記憶體非常小只有256KB，因此需要先將神經網路模型壓縮輕量化，才可以實作在開發板上。 <br>過程中使用python架設與訓練模型，並且做模型壓縮。用C++模擬神經網路運算，快速為開發版偵錯。開發板上使用C實作，包含把壓縮模型寫入，實作convoluion, fully connected，並且使用板子上的硬體加速器為向量運算加速。最後是跟論文相關的功能，包含利用ADC偵測電壓、訓練與實作early-exit模型、實作動態量化模型。 <br>實驗架設的過程中有許多考量，包含要如何重現同樣的輸入功率，而研究如何使用太陽能板並且利用ADC蒐集電壓與電流資訊。還有如何模擬經過穩壓之後的電流，透過可程式化的電源供應器再現，並且需要自己接電容器作為電池，利用三極體作為充電完成的開關。硬體電路設計方面充分利用自己在大學的電子電路知識，讓實驗配置合理化，也與台科大的研究生合作學習環境架設。 <br>為了讓論文實驗可以更自動化，也研究了如何用python控制電源供應器，讀取Arduino UART得到實驗數據所需要的電壓監測。並且得到數據之後，利用GUI介面，將實驗數據即時畫圖表，評估實驗是否符合預期。
+  - title: EasyTools
+    link: https://easytools1221.github.io
+    main_program_lang:
+      - HTML
+      - CSS
+      - JavaScript
+      - Bootstrap
+      - Jekyll
+      - PWA
+      - Google Analytics
+      - Google Adsense
+    description: 建立在GitHub Page，提供線上小工具給使用者，解決生活上的瑣事問題。

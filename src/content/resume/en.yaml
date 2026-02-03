@@ -1,0 +1,90 @@
+name: Jin-Wei Chang
+email: jinwei.chang1221@gmail.com
+education:
+  - degree: M.S.
+    institution: National Yang Ming Chiao Tung University
+    department: Computer Science
+    from: 2022
+    end: 2024
+  - degree: B.S.
+    institution: Yuan Ze University
+    department: Computer Science and Engineering
+    from: 2018
+    end: 2022
+publications:
+  master_thesis:
+    title: A Hybrid Strategy for Dynamic Neural Network Inferencing on Energy-Harvesting Devices
+    link: https://hdl.handle.net/20.500.14371/3830
+  journals:
+    - authors: Hong-Yi Chen, <b>Jin-Wei Chang</b>, Hong-Ruei Lin, and Li-Pin Chang
+      title: Graceful CNN Model Degradation in Uncorrected Flash Storage for Embedded Edge Devices
+      publication: ACM Transactions on Storage (TOS)
+      doi: 10.1145/3747298
+      note: Just accpeted
+    - authors: <b>Jin-Wei Chang</b> and Tseng-Yi Chen
+      title: 'When B+-tree Meets Skyrmion Memory: How Skyrmion Memory Affects an Indexing Scheme'
+      publication: IEEE Transactions on Computer-Aided Design of Integrated Circuits and Systems (TCAD), vol. 41, no. 11, pp. 3814-3825
+      doi: 10.1109/TCAD.2022.3197519
+      note: Integrated with ACM/IEEE CODES+ISSS 2022
+  conferences:
+    - authors: <b>Jin-Wei Chang</b> and Tseng-Yi Chen
+      title: 'When B+-tree Meets Skyrmion Memory: How Skyrmion Memory Affects an Indexing Scheme'
+      publication: ACM/IEEE CODES+ISSS 2022
+      note: Integrated with Computer-Aided Design of Integrated Circuits and Systems (TCAD)
+      importance: top conference
+awards:
+  - title: Kaggle Competition
+    year: 2022
+    work: JPX Tokyo Stock Exchange Prediction
+    award: Silver Medal
+  - title: College Student Research Creativity Award
+    year: 2022
+    work: 於斯格明子賽道記憶體技術上優化B+樹索引架構
+  - title: AI CUP
+    year: 2022
+    work: Looking for a Gentleman in Flowers - Orchid Species Identification and Classification
+    award: Honorable Mention
+    rank: "33"
+    certificate: https://global.turingcerts.com/co/cert?hash=8ef35ed3cb77f77da8fc547d453354c0efb976b7df509e4a5749a683afc9eaa6
+  - title: ICCAD CAD Contest
+    year: 2021
+    work: Problem F - Verilog Simulation Optimization via Instruction Reduction
+    award: Excellence Award
+    link: http://iccad-contest.org/2021/tw/
+  - title: Taiwan National Contest for Private Universities (NCPU)
+    year: 2020
+    award: Silver Award
+programming:
+  - title: Skyrmion Racetrace Memory on B+ Tree Simulator
+    main_program_lang:
+      - C++
+      - Simulator
+    description: Simulate the behaviors on B+ tree indexing scheme of the advanced memory material, skyrmion racetrack memory, and collect the memory operations to analyze the energy consumption and latency with different algorithms.
+    link: https://github.com/jinwei-chang/Skyrmion-on-B-plus-tree-Simulator
+  - title: Verilog Simulation Optimization via Instruction Reduction
+    main_program_lang:
+      - C++
+      - Compiler
+    description: Reduce code size of verilog files and keep the input and output logic with same logic effect.
+    link: https://github.com/jinwei-chang/Verilog-Simulation-Optimization-via-Instruction-Reduction
+  - title: Dynamic Neural Networks on Energy Harvesting Devices
+    main_program_lang:
+      - C
+      - C++
+      - Python
+      - TensorFlow
+      - TI MSP430FR5994
+      - Arduino
+    description: The programming project for the thesis experiment. We implement the dynamic neural networks on the TI MSP430FR5994 evaluation board with SRAM and FRAM, and we design a circuit to simulate an energy harvesting environment.This project includes training a neural network, converting TensorFlow model to quantized model to fit on the MCU, and implementing dynamic neural network and hybrid strategy on the MCU.
+  - title: EasyTools
+    link: https://easytools1221.github.io
+    main_program_lang:
+      - HTML
+      - CSS
+      - JavaScript
+      - Bootstrap
+      - Jekyll
+      - PWA
+      - Google Analytics
+      - Google Adsense
+    description: My website hosts on the Github Page to provide some convenitent tools to help people solve problems in their lives.
