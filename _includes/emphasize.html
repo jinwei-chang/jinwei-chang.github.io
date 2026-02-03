@@ -1,9 +1,0 @@
-<script>
-    function bold(){
-        var toReplace = "{% for name in site.data.info.name %}{{ name[1] }} {% endfor %}".trim().split(' ');
-        //var toReplace = "{{ site.data.info.name[page.language] | default: site.data.info.name['default'] }}".trim().split(' ');
-        for(var i in toReplace){
-            document.body.innerHTML = document.body.innerHTML.replaceAll(toReplace[i], `<b>${toReplace[i]}</b>`);
-        }
-    }
-</script>
