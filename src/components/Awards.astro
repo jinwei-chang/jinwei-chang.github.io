@@ -1,0 +1,38 @@
+---
+import BaseSection from '@components/BaseSection.astro';
+
+interface Props {
+  lang: string;
+  content: any;
+}
+
+const { lang, content } = Astro.props;
+const text: Record<string, Record<string, string>> = {
+  "en": {
+    "awards": "Awards",
+    "certificate": "Certificate",
+    "link": "Link",
+    "rank": "Rank",
+  },
+  "zh-tw": {
+    "awards": "獎項",
+    "certificate": "證書",
+    "link": "連結",
+    "rank": "名次",
+  },
+};
+---
+
+<BaseSection>
+    <h2 id="awards">{text[lang].awards}</h2>
+    { content && content.map((award: any) => (
+        <div class="mb-4">
+            <h3>{ award.title }</h3>
+            <p>{ award.year }</p>
+            { award.work && <p>{ award.work }</p> }
+            { (award.award || award.rank) && <p>{ award.award }{ award.rank && <span> ({text[lang].rank}: { award.rank })</span> }</p> }
+            { award.link && <a href={award.link} target="_blank" rel="noopener noreferrer" class="mr-2">{text[lang].link}</a> }
+            { award.certificate && <a href={award.certificate} target="_blank" rel="noopener noreferrer">{text[lang].certificate}</a> }
+        </div>
+    )) }
+</BaseSection>

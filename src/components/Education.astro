@@ -1,0 +1,26 @@
+---
+import BaseSection from '@components/BaseSection.astro';
+
+interface Props {
+  lang: string;
+  content: any;
+}
+
+const { lang, content } = Astro.props;
+const text: Record<string, string> = {
+  "en": "Education",
+  "zh-tw": "學歷",
+};
+
+---
+
+<BaseSection>
+    <h2 id="education">{text[lang]}</h2>
+    { content && content.map((edu: any) => (
+        <div>
+            <h3>{ edu.degree } - { edu.institution }</h3>
+            <p>{ edu.department }</p>
+            <p>{ edu.from } - { edu.end }</p>
+        </div>
+    )) }
+</BaseSection>

@@ -1,0 +1,60 @@
+---
+import BaseSection from '@components/BaseSection.astro';
+
+interface Props {
+  lang: string;
+  content: any;
+}
+
+const { lang, content } = Astro.props;
+const text: Record<string, Record<string, string>> = {
+    "en": {
+        publications: "Publications",
+        master_thesis: "Master Thesis",
+        journals: "Journals",
+        conferences: "Conferences",
+    },
+    "zh-tw": {
+        publications: "著作",
+        master_thesis: "碩士論文",
+        journals: "期刊論文",
+        conferences: "會議論文",
+    },
+};
+
+---
+
+<BaseSection>
+    <h2 id="publications">{text[lang].publications}</h2>
+    { content.master_thesis && (
+        <h3>{text[lang].master_thesis}</h3>
+        <p>{ content.master_thesis.title }</p>
+        <a href={content.master_thesis.link} target="_blank" rel="noopener noreferrer">{content.master_thesis.link}</a>
+    )}
+
+    { content.journals && <h3>{text[lang].journals}</h3> }
+    { content.journals && (
+        content.journals.map((journal: any) => (
+            <div class="mb-4">
+                <p set:html={journal.authors}></p>
+                <p>{ journal.title }</p>
+                <p>{ journal.publication }</p>
+                <p>DOI: { journal.doi }</p>
+                { journal.note && <p>{ journal.note }</p> }
+            </div>
+        ))
+    ) }
+
+    { content.conferences && <h3>{text[lang].conferences}</h3> }
+    { content.conferences && (
+        content.conferences.map((conf: any) => (
+            <div class="mb-4">
+                <p set:html={conf.authors}></p>
+                <p>{ conf.title }</p>
+                <p>{ conf.publication }</p>
+                { conf.note && <p>{ conf.note }</p> }
+            </div>
+        ))
+    ) }
+</BaseSection>
+            

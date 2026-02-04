@@ -37,6 +37,21 @@ const resumeCollection = defineCollection({
                 link: z.string().url().optional(),
             })).optional(),
         }).optional(),
+        awards: z.array(z.object({
+            title: z.string(),
+            year: z.number(),
+            work: z.string().optional(),
+            award: z.string().optional(),
+            rank: z.string().optional(),
+            certificate: z.string().url().optional(),
+            link: z.string().url().optional(),
+        })).optional(),
+        programming: z.array(z.object({
+            title: z.string(),
+            main_program_lang: z.array(z.string()),
+            description: z.string(),
+            link: z.string().url().optional(),
+        })).optional(),
     }),
 });
 

@@ -1,0 +1,33 @@
+---
+import BaseSection from '@components/BaseSection.astro';
+
+interface Props {
+  lang: string;
+  content: any;
+}
+
+const { lang, content } = Astro.props;
+const text: Record<string, Record<string, string>> = {
+  "en": {
+    "title": "Programming Projects",
+    "link": "Link",
+  },
+  "zh-tw": {
+    "title": "程式專案",
+    "link": "連結",
+  },
+};
+
+---
+
+<BaseSection>
+    <h2 id="programming">{text[lang].title}</h2>
+    { content && content.map((project: any) => (
+        <div class="mb-4">
+            <h3>{ project.title }</h3>
+            <p>{ project.main_program_lang.join(', ') }</p>
+            <p set:html={project.description}></p>
+            { project.link && <a href={project.link} target="_blank" rel="noopener noreferrer">{text[lang].link}</a> }
+        </div>
+    )) }
+</BaseSection>

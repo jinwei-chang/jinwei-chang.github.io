@@ -1,7 +1,11 @@
 ---
-import Resume from "@layouts/Resume.astro";
-
 import { getEntry } from "astro:content";
+
+import Resume from "@layouts/Resume.astro";
+import EducationSection from "@components/Education.astro";
+import PublicationsSection from "@components/Publications.astro";
+import AwardsSection from "@components/Awards.astro";
+import ProgrammingSection from "@components/Programming.astro";
 
 export async function getStaticPaths() {
   return [
@@ -23,23 +27,24 @@ if (!entry) {
 }
 
 const data = {
-  ...default_entry.data,
-  ...entry.data,
-  publications: {
-    ...default_entry.data.publications,
-    ...entry.data.publications,
-    journals: entry.data.publications?.journals ?? default_entry.data.publications?.journals,
-    conferences: entry.data.publications?.conferences ?? default_entry.data.publications?.conferences
-  },
+    ...default_entry.data,
+    ...entry.data,
+    publications: {
+        master_thesis: entry.data.publications?.master_thesis ?? default_entry.data.publications?.master_thesis,
+        journals: entry.data.publications?.journals ?? default_entry.data.publications?.journals,
+        conferences: entry.data.publications?.conferences ?? default_entry.data.publications?.conferences,
+    },
 };
 
 
 ---
 
 <Resume>
-    <nav class="mb-8">
-        <a href={`/${lang}/`}>Resume</a>
-        <div class="inline-block mx-2">
+    <nav class="flex flex-row w-full mb-8 print:hidden">
+        <div>
+            <a href={`/${lang}/`}>Resume</a>
+        </div>
+        <div class="inline-block ml-auto">
             {lang === "en" ? (
                 <a href="/zh-tw/">繁體中文</a>
             ) : (
@@ -47,57 +52,19 @@ const data = {
             )}
         </div>
     </nav>
-    <div class="grid grid-cols-1 gap-4">
-        <div>
-            <h1>{ data.name }</h1>
-            Email: { data.email }<br />
-        </div>
-        <div>
-            <h2 id="education">Education</h2>
-            { data.education && data.education.map((edu) => (
-                <div>
-                    <h3>{ edu.degree } - { edu.institution }</h3>
-                    <p>{ edu.department }</p>
-                    <p>{ edu.from } - { edu.end }</p>
-                </div>
-            )) }
-        </div>
-        <div>
-            <h2 id="publications">Publications</h2>
-            <h3>Master Thesis</h3>
-            { data.publications.master_thesis && (
-                <p>{ data.publications.master_thesis.title }</p>
-            ) }
-
-            { data.publications.journals && (
-                <>
-                    <h3>Journals</h3>
-                    { data.publications.journals.map((journal) => (
-                        <div class="mb-4">
-                            <p>{ journal.authors }</p>
-                            <p>{ journal.title }</p>
-                            <p>{ journal.publication }</p>
-                            <p>DOI: { journal.doi }</p>
-                            { journal.note && <p>{ journal.note }</p> }
-                        </div>
-                    )) }
-                </>
-            ) }
-
-            { data.publications.conferences && (
-                <>
-                    <h3>Conferences</h3>
-                    { data.publications.conferences.map((conf) => (
-                        <div class="mb-4">
-                            <p innerHTML={conf.authors}></p>
-                            <p>{ conf.title }</p>
-                            <p>{ conf.publication }</p>
-                            { conf.note && <p>{ conf.note }</p> }
-                        </div>
-                    )) }
-                </>
-            ) }
-        </div>
+    <div class="mb-8 w-full">
+        <h1>{ data.name }</h1>
+        Email: { data.email }<br />
+    </div>
+    <div class="grid grid-cols-1 gap-0 lg:grid-cols-3">
+        <aside class="lg:col-span-1 flex flex-col gap-4 lg:border-r">
+            <EducationSection lang={lang} content={data.education} />
+            <AwardsSection lang={lang} content={data.awards} />
+        </aside>
+        <main class="lg:col-span-2 flex flex-col gap-4">
+            <PublicationsSection lang={lang} content={data.publications} />
+            <ProgrammingSection lang={lang} content={data.programming} />
+        </main>
     </div>
 
 </Resume>
