@@ -56,12 +56,12 @@ const data = {
         <h1>{ data.name }</h1>
         Email: { data.email }<br />
     </div>
-    <div class="grid grid-cols-1 gap-0 lg:grid-cols-3">
-        <aside class="lg:col-span-1 flex flex-col gap-4 lg:border-r">
+    <div class="grid grid-cols-1 gap-0 lg:grid-cols-3 print:grid-cols-3">
+        <aside class="lg:col-span-1 print:col-span-1 flex flex-col gap-4 lg:border-r print:border-r">
             <EducationSection lang={lang} content={data.education} />
             <AwardsSection lang={lang} content={data.awards} />
         </aside>
-        <main class="lg:col-span-2 flex flex-col gap-4">
+        <main class="lg:col-span-2 print:col-span-2 flex flex-col gap-4">
             <PublicationsSection lang={lang} content={data.publications} />
             <ProgrammingSection lang={lang} content={data.programming} />
         </main>

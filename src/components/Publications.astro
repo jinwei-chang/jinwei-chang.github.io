@@ -32,29 +32,33 @@ const text: Record<string, Record<string, string>> = {
         <a href={content.master_thesis.link} target="_blank" rel="noopener noreferrer">{content.master_thesis.link}</a>
     )}
 
-    { content.journals && <h3>{text[lang].journals}</h3> }
-    { content.journals && (
-        content.journals.map((journal: any) => (
-            <div class="mb-4">
-                <p set:html={journal.authors}></p>
-                <p>{ journal.title }</p>
-                <p>{ journal.publication }</p>
-                <p>DOI: { journal.doi }</p>
-                { journal.note && <p>{ journal.note }</p> }
-            </div>
-        ))
-    ) }
+    { content.journals && (<h3>{text[lang].journals}</h3>) }
+    { content.journals && 
+        <ol class="list-decimal list-inside">
+            { content.journals.map((journal: any, index: number) => (
+                <li class="mb-4">
+                    <span set:html={journal.authors}></span><span>,</span>
+                    <span>{ journal.title },</span>
+                    <span class="italic">{ journal.publication },</span>
+                    <span>DOI: <a href={`https://doi.org/${journal.doi}`} target="_blank" rel="noopener noreferrer">{ journal.doi }</a></span>
+                    { journal.note && <p>{ journal.note }</p> }
+                </li>
+            )) }
+        </ol> 
+    }
 
     { content.conferences && <h3>{text[lang].conferences}</h3> }
     { content.conferences && (
-        content.conferences.map((conf: any) => (
-            <div class="mb-4">
-                <p set:html={conf.authors}></p>
-                <p>{ conf.title }</p>
-                <p>{ conf.publication }</p>
-                { conf.note && <p>{ conf.note }</p> }
-            </div>
-        ))
+        <ol class="list-decimal list-inside">
+            { content.conferences.map((conf: any) => (
+                <li class="mb-4">
+                    <span set:html={conf.authors}></span><span>,</span>
+                    <span>{ conf.title },</span>
+                    <span class="italic">{ conf.publication }</span>
+                    { conf.note && <p>{ conf.note }</p> }
+                </li>
+            )) }
+        </ol>
     ) }
 </BaseSection>
             

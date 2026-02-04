@@ -26,7 +26,7 @@ const text: Record<string, Record<string, string>> = {
 <BaseSection>
     <h2 id="awards">{text[lang].awards}</h2>
     { content && content.map((award: any) => (
-        <div class="mb-4">
+        <div class="mb-2 break-inside-avoid">
             <h3>{ award.title }</h3>
             <p>{ award.year }</p>
             { award.work && <p>{ award.work }</p> }

@@ -23,11 +23,11 @@ const text: Record<string, Record<string, string>> = {
 <BaseSection>
     <h2 id="programming">{text[lang].title}</h2>
     { content && content.map((project: any) => (
-        <div class="mb-4">
+        <div class="mb-2 break-inside-avoid">
             <h3>{ project.title }</h3>
+            { project.link && <a href={project.link} target="_blank" rel="noopener noreferrer">{text[lang].link}</a> }
             <p>{ project.main_program_lang.join(', ') }</p>
             <p set:html={project.description}></p>
-            { project.link && <a href={project.link} target="_blank" rel="noopener noreferrer">{text[lang].link}</a> }
         </div>
     )) }
 </BaseSection>
