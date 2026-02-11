@@ -18,17 +18,17 @@ publications:
   journals:
     - authors: Hong-Yi Chen, <b>Jin-Wei Chang</b>, Hong-Ruei Lin, and Li-Pin Chang
       title: Graceful CNN Model Degradation in Uncorrected Flash Storage for Embedded Edge Devices
-      publication: ACM Transactions on Storage (TOS)
+      publication: ACM Transactions on Storage (TOS), 22, 1, Article 4 (February 2026), 25 pages.
       doi: 10.1145/3747298
-      note: Just accpeted
+      year: 2026
     - authors: <b>Jin-Wei Chang</b> and Tseng-Yi Chen
-      title: 'When B+-tree Meets Skyrmion Memory: How Skyrmion Memory Affects an Indexing Scheme'
+      title: "When B+-tree Meets Skyrmion Memory: How Skyrmion Memory Affects an Indexing Scheme"
       publication: IEEE Transactions on Computer-Aided Design of Integrated Circuits and Systems (TCAD), vol. 41, no. 11, pp. 3814-3825
       doi: 10.1109/TCAD.2022.3197519
       note: Integrated with ACM/IEEE CODES+ISSS 2022
   conferences:
     - authors: <b>Jin-Wei Chang</b> and Tseng-Yi Chen
-      title: 'When B+-tree Meets Skyrmion Memory: How Skyrmion Memory Affects an Indexing Scheme'
+      title: "When B+-tree Meets Skyrmion Memory: How Skyrmion Memory Affects an Indexing Scheme"
       publication: ACM/IEEE CODES+ISSS 2022
       note: Integrated with Computer-Aided Design of Integrated Circuits and Systems (TCAD)
       importance: top conference
