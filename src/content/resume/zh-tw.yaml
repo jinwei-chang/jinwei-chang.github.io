@@ -13,25 +13,8 @@ education:
     end: 2022
 publications:
   master_thesis:
-    title: A Hybrid Strategy for Dynamic Neural Network Inferencing on Energy-Harvesting Devices
+    title: 動態神經網路推論於能源採集裝置之混合策略
     link: https://hdl.handle.net/20.500.14371/3830
-  journals:
-    - authors: Hong-Yi Chen, <b>Jin-Wei Chang</b>, Hong-Ruei Lin, and Li-Pin Chang
-      title: Graceful CNN Model Degradation in Uncorrected Flash Storage for Embedded Edge Devices
-      publication: ACM Transactions on Storage (TOS)
-      doi: 10.1145/3747298
-      note: Just accpeted
-    - authors: <b>Jin-Wei Chang</b> and Tseng-Yi Chen
-      title: 'When B+-tree Meets Skyrmion Memory: How Skyrmion Memory Affects an Indexing Scheme'
-      publication: IEEE Transactions on Computer-Aided Design of Integrated Circuits and Systems (TCAD), vol. 41, no. 11, pp. 3814-3825
-      doi: 10.1109/TCAD.2022.3197519
-      note: Integrated with ACM/IEEE CODES+ISSS 2022
-  conferences:
-    - authors: <b>Jin-Wei Chang</b> and Tseng-Yi Chen
-      title: 'When B+-tree Meets Skyrmion Memory: How Skyrmion Memory Affects an Indexing Scheme'
-      publication: ACM/IEEE CODES+ISSS 2022
-      note: Integrated with Computer-Aided Design of Integrated Circuits and Systems (TCAD)
-      importance: top conference
 awards:
   - title: Kaggle Competition
     year: 2022
